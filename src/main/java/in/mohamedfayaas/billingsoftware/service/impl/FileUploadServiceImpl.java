@@ -26,6 +26,7 @@ public class FileUploadServiceImpl implements FileUploadService{
     private final S3Client s3Client;
 
 
+    @SuppressWarnings("null")
     @Override
     public String uploadFile(MultipartFile file) {
     String filenameExtension =  file.getOriginalFilename().substring(file.getOriginalFilename().lastIndexOf(".")+1);
