@@ -1,9 +1,22 @@
 import Menubar from './components/Menubar/Menubar.jsx'
+import Dashboard from "./pages/Dashboard/Dashboard.jsx";
+import Explore from "./pages/Explore/Explore.jsx";
+import ManageUsers from "./pages/ManageUsers/ManageUsers.jsx";
+import ManageItems from "./pages/ManageItems/ManageItems.jsx";
+import ManageCategory from "./pages/ManageCategory/ManageCategory.jsx";
 
 const App = () => {
     return(
         <div>
             <Menubar />
+            <Routes>
+                <Route path="/dashboard" element={<Dashboard />} />
+                <Route path="/explore" element={<Explore />} />
+                <Route path="/manageusers" element={<ManageUsers />} />
+                <Route path="/managecategory" element={<ManageCategory />} />
+                <Route path="/manageitems" element={<ManageItems />} />
+                <Route path="/" element={<Dashboard />} />
+            </Routes>
         </div>
     )
 }

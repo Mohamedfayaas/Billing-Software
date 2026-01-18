@@ -1,10 +1,11 @@
 import './Menubar.css';
+import {assets} from "../../assets/assets.js";
 const Menubar = () => {
     return (
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark px-2">
             <a className="navbar-brand" href="#">
                 <img
-                    src="assets/logo.png"
+                    src={assets.logo}
                     alt="Logo"
                     height="40"
                 />
