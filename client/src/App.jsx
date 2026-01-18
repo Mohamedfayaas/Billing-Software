@@ -4,7 +4,8 @@ import Explore from "./pages/Explore/Explore.jsx";
 import ManageUsers from "./pages/ManageUsers/ManageUsers.jsx";
 import ManageItems from "./pages/ManageItems/ManageItems.jsx";
 import ManageCategory from "./pages/ManageCategory/ManageCategory.jsx";
-
+import {Component} from "react";
+import {Route, Routes} from "react-router-dom";
 const App = () => {
     return(
         <div>
