@@ -115,10 +115,6 @@ const CategoryForm = () => {
                 </div>
             </div>
         </div>
-
-
-
-
     )
 
 }
