@@ -5,15 +5,15 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Builder
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class CategoryRequest {
+@Builder
+public class UserRequest {
 
     private String name;
-    private String description;
-    private String bgColor;
-
-
+    private String email;
+    private String password;
+    private String role;
 }
+

@@ -42,7 +42,7 @@ public class CategoryServiceImpl implements CategoryService {
                 .categoryId(UUID.randomUUID().toString())
                 .name(request.getName())
                 .description(request.getDescription())
-                .bgColor(request.getBgcolor())
+                .bgColor(request.getBgColor())
                 .build();
     }
     @Override

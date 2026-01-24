@@ -1,19 +1,14 @@
 package in.mohamedfayaas.billingsoftware.io;
 
 import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@Builder
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class CategoryRequest {
+public class AuthRequest {
 
-    private String name;
-    private String description;
-    private String bgColor;
-
-
+    private String email;
+    private String password;
 }
