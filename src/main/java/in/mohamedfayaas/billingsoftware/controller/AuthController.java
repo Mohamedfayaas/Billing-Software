@@ -16,6 +16,7 @@ import org.springframework.web.server.ResponseStatusException;
 
 import in.mohamedfayaas.billingsoftware.io.AuthRequest;
 import in.mohamedfayaas.billingsoftware.io.AuthResponse;
+import in.mohamedfayaas.billingsoftware.service.UserService;
 import in.mohamedfayaas.billingsoftware.service.impl.AppUserDetailsService;
 import in.mohamedfayaas.billingsoftware.util.JwtUtil;
 import lombok.RequiredArgsConstructor;
@@ -27,6 +28,7 @@ public class AuthController {
     private final AuthenticationManager authenticationManager;
     private final AppUserDetailsService appUserDetailsService;
     private final JwtUtil jwtUtil;
+    private final UserService userService;
     
 
     @PostMapping("/login")
@@ -34,8 +36,8 @@ public class AuthController {
         authenticate(request.getEmail(), request.getPassword());
         final UserDetails userDetails  = appUserDetailsService.loadUserByUsername(request.getEmail());
         final String jwtToken = jwtUtil.generateToken(userDetails);
-        //TODO: fetch role from repository
-        return new AuthResponse(request.getEmail(),"USER", jwtToken);
+        String role = userService.getUserRole(request.getEmail());
+        return new AuthResponse(request.getEmail(),role, jwtToken);
     }
 
     private void authenticate(String email, String password) throws Exception {
