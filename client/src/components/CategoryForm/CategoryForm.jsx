@@ -108,7 +108,7 @@ const CategoryForm = () => {
                                 <br />
                                 <input
                                     type="color"
-                                    name="bgColor"   // ✅ FIXED
+                                    name="bgColor"   
                                     value={data.bgColor}
                                     onChange={onChangeHandler}
                                 />
