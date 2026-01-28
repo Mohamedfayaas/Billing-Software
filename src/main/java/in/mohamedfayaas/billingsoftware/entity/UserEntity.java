@@ -1,6 +1,6 @@
 package in.mohamedfayaas.billingsoftware.entity;
 
-import java.security.Timestamp;
+import java.sql.Timestamp;
 
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
